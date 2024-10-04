@@ -19,15 +19,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="u97-2b-MoG">
                                 <rect key="frame" x="151" y="102" width="100" height="352"/>
                                 <subviews>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bxj-Iv-mLt">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bxj-Iv-mLt">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </view>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sws-7l-k0w">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sws-7l-k0w">
                                         <rect key="frame" x="0.0" y="126" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     </view>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StG-m0-9v9">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StG-m0-9v9">
                                         <rect key="frame" x="0.0" y="252" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
@@ -40,11 +40,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHN-Bd-ZqH">
                                 <rect key="frame" x="142.66666666666666" y="691" width="116.99999999999997" height="44"/>
                                 <color key="backgroundColor" red="0.022830619900000002" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="117" id="RDh-Mm-l2w"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="2" maxX="10" maxY="2"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="controlButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bxg-FV-8Kc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -56,6 +62,12 @@
                             <constraint firstItem="u97-2b-MoG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pka-hc-0mT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="controlButton" destination="gHN-Bd-ZqH" id="nrk-wE-3ev"/>
+                        <outlet property="greenLightView" destination="StG-m0-9v9" id="98j-IF-fYM"/>
+                        <outlet property="redLightView" destination="Bxj-Iv-mLt" id="0ug-6O-XPU"/>
+                        <outlet property="yellowLightView" destination="sws-7l-k0w" id="IQc-kw-CB1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
